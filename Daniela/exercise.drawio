@@ -1,0 +1,67 @@
+<mxfile host="65bd71144e">
+    <diagram id="iSBRltnWKyq5xoobThbc" name="Page-1">
+        <mxGraphModel dx="1800" dy="1058" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="TRANSPORT COMPANY" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="328" y="30" width="195" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="a transport company has fleet busses&lt;br&gt;the busses are distrubuted on different routes&lt;br&gt;create database to keep info about these routes&lt;br&gt;route is identified by code&lt;br&gt;total distance(km), source and destination of each route are stored&lt;br&gt;each bus has a license plate number, a model, its capacity(passengers) and the name of its driver&lt;br&gt;one bus can only cover one route&lt;br&gt;routes cover several cities.&amp;nbsp;&lt;br&gt;store the name of the city, address and telephone number of the bus station&lt;br&gt;to keep stops organised, each bus stop has an order number. this number can be different depending on the route the city belongs to (one city can belong to several routes)." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="85" y="90" width="680" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Routes" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="350" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="route_id INT AUTOINCREMENT" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="5">
+                    <mxGeometry y="30" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="route_km INT&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="5">
+                    <mxGeometry y="50" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="route_source int" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="5">
+                    <mxGeometry y="70" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="route_destination int" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="5">
+                    <mxGeometry y="90" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Busses" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="350" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="busroute_id INT AUTO-INCREMENT" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="10">
+                    <mxGeometry y="30" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="plate_nr int not null" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="10">
+                    <mxGeometry y="60" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="bus_model varchar" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="10">
+                    <mxGeometry y="85" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="seat_capacity INT&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="10">
+                    <mxGeometry y="110" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="driver_name VARCHAR" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="10">
+                    <mxGeometry y="130" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Bus stations" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="620" width="280" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="station_id autoincrement INT&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="19">
+                    <mxGeometry y="30" width="270" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="city_name varchar" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="19">
+                    <mxGeometry y="60" width="270" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="station_address varchar&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="19">
+                    <mxGeometry x="5" y="85" width="270" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="phone_nr int" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="19">
+                    <mxGeometry x="5" y="115" width="270" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="19">
+                    <mxGeometry x="10" y="145" width="270" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
